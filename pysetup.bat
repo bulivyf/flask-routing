@@ -1,0 +1,1 @@
+set path=%path%;"c:\program files\anaconda3\";"c:\program files\anaconda3\scripts\";
