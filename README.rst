@@ -14,8 +14,11 @@ The initial objective is to present a baseline for implementing nearest neighbor
 
 
 DEVELOPER NOTES
+
 Python version: Anaconda 3
+
 IDE: PyCharm Community Edition 2018.2 (for personal use only)
+
 This is a Flask (server based) version of the "Routing" project also on github.  Initial tests in generating kruskal networks with Javascript showed it wasn't ideal for the task (working with metrices and copying such slowed it all down).  So this version starts with that initial code, but will remove it in favor of a python implementation which will be called via REST.
 
 
@@ -23,7 +26,7 @@ To run the web server application type:
 
     ```python runner.py runserver```
 
-then navigate to the url that the console lists.  Its likely http://loclahost:5000 or very similar.  Use the map as described in the INTRODUCTION section.
+then navigate to the url that the console lists.  Its likely http://localhost:5000 or very similar.  Use the map as described in the INTRODUCTION section.
 
 
 REFERENCE
