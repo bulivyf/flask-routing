@@ -32,6 +32,9 @@ def create_app(config_name):
     from .views.main import main as main_blueprint
     app.register_blueprint(main_blueprint, url_prefix='/')
 
+    from .views.routes import routes as routes_blueprint
+    app.register_blueprint(routes_blueprint, url_prefix='/routes')
+
     return app
 
 
