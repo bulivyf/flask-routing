@@ -33,6 +33,18 @@
         return '<table>'+html_result+'</table>';
     }
 
+    function get_best_distance(dm) {
+        let paths = [];
+        for(kruskal_idx = 0; kruskal_idx < dm.length; kruskal_idx++){
+            let row_idxs = find_path_at_node(dm, kruskal_idx);
+            paths[kruskal_idx] = row_idxs;
+
+            let total_dist = calc_path_distance(dm, paths[kruskal_idx]);
+            console.log("Total distance at node idx "+kruskal_idx+" = "+to3dps(total_dist) + " miles");
+        }
+
+    }
+
 
     let raster = new ol.layer.Tile({
         source: new ol.source.Stamen({
@@ -133,16 +145,10 @@
         //     document.getElementById("info").innerHTML = "&nbsp;";
         // }
         dm = build_distance_matrix(coords);
-        let paths = [];
+
 
         // let kruskal_idx = 3;
-        for(kruskal_idx = 0; kruskal_idx < dm.length; kruskal_idx++){
-            let row_idxs = find_path_at_node(dm, kruskal_idx);
-            paths[kruskal_idx] = row_idxs;
-
-            let total_dist = calc_path_distance(dm, paths[kruskal_idx]);
-            console.log("Total distance at node idx "+kruskal_idx+" = "+to3dps(total_dist) + " miles");
-        }
+        get_best_distance(dm);
 
     });
 
