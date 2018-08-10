@@ -19,7 +19,7 @@ Python version: Anaconda 3
 
 IDE: PyCharm Community Edition 2018.2 (for personal use only)
 
-This is a Flask (server based) version of the "Routing" project also on github.  Initial tests in generating kruskal networks with Javascript showed it wasn't ideal for the task (working with metrices and copying such slowed it all down).  So this version starts with that initial code, but will remove it in favor of a python implementation which will be called via REST.
+This is a Flask (server based) version of the "Routing" project also on github.  Initial tests in generating kruskal networks with Javascript showed it wasn't ideal for the task (working with and copying matrices resulted in slow performance).  So this version starts with that initial code, but will remove it in favor of a python implementation which will be called via REST.
 
 
 To run the web server application type:
