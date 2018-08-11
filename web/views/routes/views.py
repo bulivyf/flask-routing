@@ -9,6 +9,9 @@ print("Loading routes.views")
 def get_distance(id):
     if request.method == 'POST':
         print('POST')
+        data = request.get_json()
+        x = data['x']
+        print (x)
 
     json_out = {'name': 7}
     if id == 'status':

@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90bb901e-d929-42fe-bf65-be8f245034a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/views/routes/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/views/routes/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/static/js/gui_interactivity.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/js/gui_interactivity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/main/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/main/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/routes/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/routes/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,12 +16,12 @@
     <session id="-1676426761">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -48,18 +45,18 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="163" />
-          <entry key="js" value="169" />
-          <entry key="py" value="254" />
+          <entry key="js" value="186" />
+          <entry key="py" value="312" />
           <entry key="rst" value="718" />
-          <entry key="txt" value="38" />
+          <entry key="txt" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="163" />
-          <entry key="JavaScript" value="169" />
-          <entry key="PLAIN_TEXT" value="38" />
-          <entry key="Python" value="254" />
+          <entry key="JavaScript" value="186" />
+          <entry key="PLAIN_TEXT" value="65" />
+          <entry key="Python" value="312" />
           <entry key="ReST" value="718" />
         </counts>
       </usages-collector>
@@ -72,8 +69,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/web/views/main/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+                <state relative-caret-position="425">
+                  <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
                   <folding>
                     <element signature="e#0#49#0" expanded="true" />
                   </folding>
@@ -91,7 +88,7 @@
                 <entry file="file://$PROJECT_DIR$/web/views/routes/__init__.py">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="51">
-                      <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+                      <caret line="3" selection-start-line="3" selection-end-line="3" />
                     </state>
                   </provider>
                 </entry>
@@ -99,11 +96,11 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/web/views/routes/views.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="289">
-                      <caret line="17" selection-start-line="17" selection-end-line="17" />
+                    <state relative-caret-position="340">
+                      <caret line="20" selection-start-line="20" selection-end-line="20" />
                       <folding>
                         <element signature="e#0#41#0" expanded="true" />
-                        <marker date="1533930164696" expanded="true" signature="109:112" ph="..." />
+                        <marker date="1534004263144" expanded="true" signature="109:112" ph="..." />
                       </folding>
                     </state>
                   </provider>
@@ -134,8 +131,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/web/static/js/gui_interactivity.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="332">
-                      <caret line="53" column="11" lean-forward="true" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+                    <state relative-caret-position="485">
+                      <caret line="62" column="12" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
                     </state>
                   </provider>
                 </entry>
@@ -327,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1533922701500</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Rudimentary REST in place.">
+      <created>1533930871809</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1533930871809</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -360,14 +364,15 @@
     <MESSAGE value="Improved wording." />
     <MESSAGE value="JS cleanup." />
     <MESSAGE value="JS milestone." />
-    <option name="LAST_COMMIT_MESSAGE" value="JS milestone." />
+    <MESSAGE value="Rudimentary REST in place." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rudimentary REST in place." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/web/views/routes/views.py</url>
-          <line>17</line>
+          <line>20</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -426,30 +431,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/config.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/routes/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/routes/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
@@ -462,8 +464,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/main/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="425">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
@@ -472,19 +474,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/views/routes/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <marker date="1533930164696" expanded="true" signature="109:112" ph="..." />
+            <marker date="1534004263144" expanded="true" signature="109:112" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/static/js/gui_interactivity.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="53" column="11" lean-forward="true" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+        <state relative-caret-position="485">
+          <caret line="62" column="12" lean-forward="true" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
         </state>
       </provider>
     </entry>

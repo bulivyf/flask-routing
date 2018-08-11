@@ -43,30 +43,29 @@
 //            console.log("Total distance at node idx "+kruskal_idx+" = "+to3dps(total_dist) + " miles");
 //        }
 
-        let data = {
-            "key": [1,2,3,4,5]
-          };
+        let data = {x: [1.0,2.0,3.0], y: [2.0, 3.0, 1.0]};
 
         const url = "http://127.0.0.1:5000/routes/check/status";
 
-        $.post( url, data, function( result ) {
-          $( "#info" ).html( result );
-        });
-
-
-//        $.ajax({
-//          type: "POST",
-//          url: url,
-//          data: JSON.stringify(data),
-//          contentType: "application/json; charset=utf-8",
-//          dataType: "json",
-//          error: function() {
-//            alert("Error");
-//          },
-//          success: function() {
-//            alert("OK");
-//          }
+//        $.post( url, data, function( result ) {
+//          $( "#info" ).html( result );
 //        });
+
+
+        $.ajax({
+          type: "POST",
+          url: url,
+          data: JSON.stringify(data),
+          contentType: "application/json; charset=utf-8",
+          dataType: "json",
+          error: function() {
+            alert("Error");
+          },
+          success: function(data_back) {
+            console.log(data_back);
+            alert("OK");
+          }
+        });
     }
 
 
