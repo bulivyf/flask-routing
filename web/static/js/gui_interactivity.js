@@ -43,7 +43,8 @@
 //            console.log("Total distance at node idx "+kruskal_idx+" = "+to3dps(total_dist) + " miles");
 //        }
 
-        let data = {x: [1.0,2.0,3.0], y: [2.0, 3.0, 1.0]};
+//        let data = {x: [[[2,1.0],[2.0,4]],[[2,3.0],[4,5]]]};
+        let data = {'dm':dm}
 
         const url = "http://127.0.0.1:5000/routes/check/status";
 

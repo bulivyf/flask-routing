@@ -2,6 +2,10 @@ from flask import Response, json, request
 
 from web.views.routes import routes
 
+import json
+
+from web.views.routes.nearestneighbor import NearestNeighbor
+
 print("Loading routes.views")
 
 
@@ -10,12 +14,15 @@ def get_distance(id):
     if request.method == 'POST':
         print('POST')
         data = request.get_json()
-        x = data['x']
-        print (x)
+        x = data['dm']
+        print(x)
 
-    json_out = {'name': 7}
-    if id == 'status':
-        json_out = {'name': 'ok'}  # get_group_options_as_name_dict(db.session)
+    base_distances = json.loads(request.data)
+    NearestNeighbor().find_min_distance(base_distances['dm'])
+
+    json_out = {'name': [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]}
+    # if id == 'status':
+    #     json_out = {'name': 'ok'}  # get_group_options_as_name_dict(db.session)
     print(json_out)
     http_resp = _create_http_response(json_out)
     return http_resp
