@@ -33,7 +33,7 @@
         return '<table>'+html_result+'</table>';
     }
 
-    function get_best_distance(dm) {
+    function get_best_distance(dm, coords) {
 //        let paths = [];
 //        for(kruskal_idx = 0; kruskal_idx < dm.length; kruskal_idx++){
 //            let row_idxs = find_path_at_node(dm, kruskal_idx);
@@ -43,8 +43,8 @@
 //            console.log("Total distance at node idx "+kruskal_idx+" = "+to3dps(total_dist) + " miles");
 //        }
 
-//        let data = {x: [[[2,1.0],[2.0,4]],[[2,3.0],[4,5]]]};
-        let data = {'dm':dm}
+//        let data = {dm: [[[2,1.0],[2.0,4]],[[2,3.0],[4,5]]]};
+        let data = {'dm':dm,'points':coords}
 
         const url = "http://127.0.0.1:5000/routes/check/status";
 
@@ -172,7 +172,7 @@
 
 
         // let kruskal_idx = 3;
-        get_best_distance(dm);
+        get_best_distance(dm, coords);
 
     });
 
