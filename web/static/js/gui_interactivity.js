@@ -33,41 +33,8 @@
         return '<table>'+html_result+'</table>';
     }
 
-    function get_best_distance(dm, coords) {
-//        let paths = [];
-//        for(kruskal_idx = 0; kruskal_idx < dm.length; kruskal_idx++){
-//            let row_idxs = find_path_at_node(dm, kruskal_idx);
-//            paths[kruskal_idx] = row_idxs;
-//
-//            let total_dist = calc_path_distance(dm, paths[kruskal_idx]);
-//            console.log("Total distance at node idx "+kruskal_idx+" = "+to3dps(total_dist) + " miles");
-//        }
-
-//        let data = {dm: [[[2,1.0],[2.0,4]],[[2,3.0],[4,5]]]};
-        let data = {'dm':dm,'points':coords}
-
-        const url = "http://127.0.0.1:5000/routes/check/status";
-
-//        $.post( url, data, function( result ) {
-//          $( "#info" ).html( result );
-//        });
 
 
-        $.ajax({
-          type: "POST",
-          url: url,
-          data: JSON.stringify(data),
-          contentType: "application/json; charset=utf-8",
-          dataType: "json",
-          error: function() {
-            alert("Error");
-          },
-          success: function(data_back) {
-            console.log(data_back);
-            alert("OK");
-          }
-        });
-    }
 
 
     let raster = new ol.layer.Tile({
@@ -188,3 +155,93 @@
         }
     }
     addInteraction();
+
+
+
+    function get_best_distance(dm, coords) {
+//        let paths = [];
+//        for(kruskal_idx = 0; kruskal_idx < dm.length; kruskal_idx++){
+//            let row_idxs = find_path_at_node(dm, kruskal_idx);
+//            paths[kruskal_idx] = row_idxs;
+//
+//            let total_dist = calc_path_distance(dm, paths[kruskal_idx]);
+//            console.log("Total distance at node idx "+kruskal_idx+" = "+to3dps(total_dist) + " miles");
+//        }
+
+//        let data = {dm: [[[2,1.0],[2.0,4]],[[2,3.0],[4,5]]]};
+        let ref_data = {'dm':dm,'points':coords}
+
+        const url = "http://127.0.0.1:5000/routes/check/";
+
+//        $.post( url, data, function( result ) {
+//          $( "#info" ).html( result );
+//        });
+
+
+        $.ajax({
+          type: "POST",
+          url: url+"status",
+          data: JSON.stringify(ref_data),
+          contentType: "application/json; charset=utf-8",
+          dataType: "json",
+          error: function(data_res) {
+            console.log(data_res.responseText);
+//            let kmlSource = new ol.source.KML({
+//                projection: 'EPSG:3857',
+//                text: data_res.responseText
+//            });
+
+            let kmlSource = new ol.source.Vector({});
+            let features = new ol.format.KML().readFeatures(data_res.responseText ,{
+                                   dataProjection:'EPSG:4326',
+                                   featureProjection:'EPSG:3857'
+                                });
+            kmlSource.addFeatures(features);
+
+
+
+            // CREATE VECTOR LAYER, assign source and style
+            let vectorLayer = new ol.layer.Vector({
+                source: kmlSource,
+
+                style: function (feature, resolution) {
+
+                    return [new ol.style.Style({
+                        fill: new ol.style.Fill({
+                            color: 'rgba(255, 255, 255, 0.6)'
+                        }),
+                        stroke: new ol.style.Stroke({
+                            color: 'red',
+                            width: 1
+                        })
+                    })];
+                }
+
+            });
+
+            // Add vector layer to map
+            map.addLayer(vectorLayer);
+          },
+          success: function(data_back) {
+            console.log(data_back);
+            alert("OK");
+          }
+        });
+
+//        const route_vector_layer = new ol.layer.Vector({
+//            source: new ol.source.Vector({
+//                url: url + 'result.kml',
+//                data: ref_data,
+//                format: new ol.format.KML()
+//            })
+//        });
+//        map.addLayer(route_vector_layer);
+
+
+
+
+
+    }
+
+
+
