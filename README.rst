@@ -9,7 +9,7 @@ INTRODUCTION
 The code uses OpenLayer to present a map of the area west of DC that calculates geospatial distance between points. To do this, the user should click multiple consecutive points to set (lat,lon) positions on the map. Once a double click is made the application gathers all the points and calculates geospatial distances between each. The (lat,lon) and distances between each are presented below the map as html tables after the double click event.
 
 SERVER CALCULATION
-The Flask web server does rudimentary nearest neighbor calcs from the json coords and distances.  From there a number of 'closet' lines are calculated; all based on line-of-sight as viewed from the visible map.
+The Flask web server does rudimentary nearest neighbor calcs from the json coords and distances.  From there a number of 'closest' lines are calculated; all based on line-of-sight as viewed from the visible map.
 Then kml is generated and pushed to the client.  The client renders the kml.
 
 TODO
