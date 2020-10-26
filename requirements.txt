@@ -18,6 +18,6 @@ pathlib==1.0.1
 pycodestyle==2.3.1
 SQLAlchemy==1.1.15
 urllib3==1.22
-Werkzeug==0.13
+Werkzeug==0.15.3
 WTForms==2.1
 simplekml==1.3.1
